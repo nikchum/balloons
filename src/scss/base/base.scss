@@ -1,5 +1,21 @@
 html {
     font-size: 62.5%;
+
+    @include respond(tab-lang) {
+        font-size: 56.25%;
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+
+    @include respond(phone) {
+        font-size: 30%;
+    }
+
+    @include respond(big-screen) {
+        font-size: 75%;
+    }
 }
 
 body {
@@ -14,6 +30,7 @@ body {
 
 .container {
     position: relative;
+    // padding: 0 1rem;
     background-color: #f7f7f7;
     z-index: 0;
 }

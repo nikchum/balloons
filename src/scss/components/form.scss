@@ -4,12 +4,30 @@
     box-shadow: $box-shadow;
     overflow: hidden;
     border-radius: .5rem;
+
+    @include respond(tab-port) {
+        background: linear-gradient(115deg, rgba($color-white, 0.9) 0%, rgba($color-white, 0.9) 507%, rgba($color-brown-light, 0.7) 57%, rgba($color-black, 0.7) 100%), url(../img/bg-form.jpg) center/cover no-repeat;
+    }
 }
 
 .form {
     padding-top: 5rem;
     padding-left: 5rem;
-    width: 60%;
+    width: 70%;
+
+    @include respond(tab-port) {
+        width: 100%;
+        text-align: center;
+        padding: 4rem 2rem;
+    }
+
+
+
+    &__group:last-child {
+        @include respond(tab-lang) {
+            // text-align: center;
+        }
+    }
 
     &__group:not(:last-child) {
         margin-bottom: 2rem;
@@ -17,6 +35,18 @@
 
     &__group:nth-child(4) {
         margin-bottom: 4rem;
+    }
+
+    @include respond(tab-lang) {
+        display: block;
+
+        &__group:not(:last-child) {
+            margin-bottom: 1.3rem;
+        }
+
+        &__group:nth-child(4) {
+            margin-bottom: 3rem;
+        }
     }
 
     &__input {
@@ -30,6 +60,12 @@
         border-bottom: .3rem solid transparent;
         border-radius: .5rem;
         width: 75%;
+        box-shadow: $box-shadow;
+
+        @include respond(tab-port) {
+            width: 90%;
+
+        }
 
         &:focus {
             outline: none;
@@ -59,8 +95,24 @@
     }
 
     &__group-radio {
-        width: 30%;
         display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+
+        @include respond(tab-lang) {
+            display: block;
+
+            @include respond(tab-lang) {
+                text-align: center;
+                display: inline-block;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+        }
     }
 
     &__input-radio {
@@ -71,6 +123,7 @@
         position: relative;
         cursor: pointer;
         padding-left: 4rem;
+
     }
 
     &__button-radio {

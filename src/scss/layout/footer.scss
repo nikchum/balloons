@@ -16,7 +16,16 @@
 
         &:not(:last-child) {
             margin-right: 5rem;
+
+            @include respond(tab-lang) {
+                margin-right: 2.3rem;
+            }
         }
+
+        @include respond(tab-port) {
+            margin: 0 3rem 3rem 0;
+        }
+
     }
 
     &__link {
