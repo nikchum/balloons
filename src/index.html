@@ -1,13 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  @@include('./html/head.html', { "title":"Главная" })
+  @@include('./html/head.html', { "title":"Balloons" })
   <body>
-    @@include('./html/header.html')
-    <main>
-      Привет
-      <!-- <img src="@img/1574605225_2.jpg" width="500" /> -->
-    </main>
-    @@include('./html/footer.html')
+    <div class="container">
+      @@include('./html/menu.html') @@include('./html/header.html')
+      <main>
+        @@include('./html/home/about.html')
+        @@include('./html/home/adventure.html')
+        @@include('./html/home/tour.html')
+        @@include('./html/home/feedBack.html')
+        @@include('./html/home/book.html')
+      </main>
+
+      @@include('./html/footer.html')
+    </div>
+
+    <!-- <section class="grid-test">
+      <div class="row">
+        <div class="col-1-of-2">col-1-of-2</div>
+        <div class="col-1-of-2">col-1-of-2</div>
+      </div>
+
+      <div class="row">
+        <div class="col-1-of-3">col-1-of-3</div>
+        <div class="col-1-of-3">col-1-of-3</div>
+        <div class="col-1-of-3">col-1-of-3</div>
+      </div>
+
+      <div class="row">
+        <div class="col-1-of-3">col-1-of-3</div>
+        <div class="col-2-of-3">col-2-of-3</div>
+      </div>
+
+      <div class="row">
+        <div class="col-1-of-4">col-1-of-4</div>
+        <div class="col-1-of-4">col-1-of-4</div>
+        <div class="col-1-of-4">col-1-of-4</div>
+        <div class="col-1-of-4">col-1-of-4</div>
+      </div>
+
+      <div class="row">
+        <div class="col-1-of-4">col-1-of-4</div>
+        <div class="col-1-of-4">col-1-of-4</div>
+        <div class="col-2-of-4">col-2-of-4</div>
+      </div>
+
+      <div class="row">
+        <div class="col-1-of-4">col-1-of-4</div>
+        <div class="col-3-of-4">col-3-of-4</div>
+      </div>
+    </section> -->
+
     <script src="./js/app.min.js"></script>
   </body>
 </html>

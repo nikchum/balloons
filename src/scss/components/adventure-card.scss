@@ -1,0 +1,27 @@
+.adventure-card {
+    padding: 2.5rem;
+    background-color: rgba($color-white, .8);
+    border-radius: .5rem;
+    box-shadow: $box-shadow;
+    text-align: center;
+    transition: all 200ms;
+
+    svg {
+        display: inline-block;
+        width: 6rem;
+        height: 6rem;
+        fill: $color-brown-dark;
+    }
+
+
+    .icon-world {
+        display: block;
+        width: 30px;
+        height: 30px;
+        mask-image: url(../img/world.svg);
+    }
+
+    &:hover {
+        transform: translateY(-1.5rem) scale(1.03);
+    }
+}

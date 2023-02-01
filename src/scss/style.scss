@@ -1,9 +1,25 @@
-@import "fonts";
+@import './abstracts/variables';
+@import './abstracts/mixins';
 
-body {
-    font-family: "beer_money";
-    font-weight: 700;
-    background-color: #000;
+@import './base/reset';
+@import './base/fonts.scss';
+@import './base/animation.scss';
+@import './base/base';
+@import './base/typography';
+@import './base/utilites';
 
-    background: url("@img/1574605225_2.jpg") 0 0 no-repeat;
-}
+@import './components/button';
+@import './components/button-text';
+@import './components/composition';
+@import './components/adventure-card';
+@import './components/tour-card';
+@import './components/feedBack-card';
+@import './components/bg-video.scss';
+@import './components/form';
+
+@import './layout/menu';
+@import './layout/grid';
+@import './layout/header';
+@import './layout/footer';
+
+@import './pages/home';

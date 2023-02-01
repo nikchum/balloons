@@ -1,0 +1,135 @@
+.tour-card {
+    position: relative;
+    height: 50rem;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+
+
+    &__side {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50rem;
+        transition: all 400ms ease-out;
+        color: white;
+        backface-visibility: hidden;
+        border-radius: .5rem;
+        overflow: hidden;
+
+        &_front {
+            box-shadow: $box-shadow;
+        }
+
+        &_back {
+
+            transform: rotateY(180deg);
+            background: linear-gradient(120deg, $color-brown-light, $color-brown-dark);
+            box-shadow: $box-shadow;
+        }
+    }
+
+    &:hover &__side_front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side_back {
+        transform: rotateY(0deg);
+    }
+
+    &__img {
+        height: 21rem;
+        background-blend-mode: hard-light;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+
+        &_1 {
+            background: $color-brown-light url(../img/card-1.jpg) center/cover no-repeat;
+        }
+
+        &_2 {
+            background: $color-brown-light url(../img/card-2.jpg) center/cover no-repeat;
+        }
+
+        &_3 {
+            background: $color-brown-light url(../img/card-3.jpg) center/cover no-repeat;
+        }
+    }
+
+    &__title {
+        position: absolute;
+        top: 17rem;
+        right: 0;
+        font-size: 2.8rem;
+        letter-spacing: .2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+    }
+
+    &__span {
+        padding: 1rem 2rem .3rem 2rem;
+        background: linear-gradient(90deg, $color-brown-light, $color-brown-dark);
+
+        &_1 {}
+
+        &_2 {
+            position: absolute;
+            top: 3.4rem;
+            right: 0;
+            padding-bottom: 1rem;
+            padding-top: .2rem;
+        }
+    }
+
+    &__description {
+
+        ul {
+            margin: 0 auto;
+            list-style: none;
+            width: 65%;
+            text-align: center;
+
+            li {
+                display: inline-block;
+                font-size: $font-size-paragraph;
+                letter-spacing: .2rem;
+                color: $color-gray;
+                border-bottom: 1px solid $color-gray;
+
+
+                &:not(:last-child) {
+                    margin-bottom: 2rem;
+                }
+            }
+
+
+        }
+    }
+
+    &__backSide-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    &__text {
+        margin-bottom: 8rem;
+        letter-spacing: .2rem;
+        text-transform: uppercase;
+        text-align: center;
+        color: $color-white;
+
+        &_1 {
+            font-size: $font-size-paragraph;
+            font-weight: 300;
+
+        }
+
+        &_2 {
+            font-size: 6rem;
+            font-weight: 500;
+        }
+    }
+}
