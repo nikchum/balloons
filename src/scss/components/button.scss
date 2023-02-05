@@ -21,6 +21,10 @@
         @include respond(tab-port) {
             padding: 2rem 5rem;
         }
+
+        @include respond(phone) {
+            padding: 3rem 6rem;
+        }
     }
 
     &:hover,

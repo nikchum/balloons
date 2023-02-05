@@ -10,7 +10,7 @@ html {
     }
 
     @include respond(phone) {
-        font-size: 30%;
+        font-size: 40%;
     }
 
     @include respond(big-screen) {
@@ -30,6 +30,10 @@ body {
     @include respond(tab-lang) {
         padding: 3rem;
     }
+
+    @include respond(phone) {
+        padding: 0;
+    }
 }
 
 .container {
@@ -37,4 +41,8 @@ body {
     // padding: 0 1rem;
     background-color: #f7f7f7;
     z-index: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }

@@ -2,6 +2,10 @@
     padding: 8rem;
     background: #333333;
 
+    @include respond(phone) {
+        padding: 4rem 8rem;
+    }
+
     &__logo {
         width: 12rem;
     }
@@ -26,10 +30,19 @@
                 margin: 0;
                 padding: 2rem;
             }
+
+            @include respond(phone) {
+                padding: 2rem 10rem;
+            }
         }
 
         @include respond(tab-port) {
             margin: 0 3rem 3rem 0;
+        }
+
+        @include respond(phone) {
+            margin: 0;
+            padding: 2rem 10rem;
         }
 
     }

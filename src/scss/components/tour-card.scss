@@ -129,6 +129,10 @@
 
     &__description {
 
+        @include respond(phone) {
+            padding-top: 5rem;
+        }
+
         ul {
             margin: 0 auto;
             list-style: none;

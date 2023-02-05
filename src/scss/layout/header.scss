@@ -28,5 +28,9 @@
         @include respond(tab-lang) {
             top: 50%;
         }
+
+        @include respond(phone) {
+            padding: 0 3rem;
+        }
     }
 }

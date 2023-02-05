@@ -12,12 +12,20 @@
         padding: 3rem;
     }
 
+    @include respond(phone) {
+        transform: skewX(0);
+    }
+
 
     &>* {
         transform: skewX(-330deg);
 
         @include respond(tab-port) {
             transform: skewX(-350deg);
+        }
+
+        @include respond(phone) {
+            transform: skewX(0);
         }
     }
 
@@ -31,6 +39,11 @@
         -webkit-shape-outside: circle(50% at 50% 50%);
         margin-right: 4rem;
         overflow: hidden;
+
+        @include respond(phone) {
+            margin-bottom: 2rem;
+            float: none;
+        }
 
         img {
             height: 100%;

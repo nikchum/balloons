@@ -17,3 +17,18 @@ export function isWebp() {
     document.documentElement.classList.add(className);
   });
 }
+
+// моб меню
+const switchRef = document.getElementById("navi-toggle");
+const navBoxRef = document.querySelector(".navigation__nav");
+
+navBoxRef.addEventListener("click", closeModal);
+
+export function closeModal(e) {
+  if (e.target.nodeName !== "A") return;
+
+  switchRef.checked = false;
+}
+
+
+
